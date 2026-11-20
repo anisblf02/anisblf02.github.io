@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anis Boulfoul | Cybersecurity Engineer & SOC Analyst</title>
+  
+  <!-- Meta & OpenGraph -->
+  <meta name="description" content="Portfolio of Anis Boulfoul - Final-year cybersecurity engineering student at ESI-SBA seeking a SOC Analyst role. Hands-on in SIEM, Zeek, WAF tuning, malware analysis, and DevSecOps.">
+  <meta name="author" content="Anis Boulfoul">
+  <meta property="og:title" content="Anis Boulfoul | Cybersecurity Engineer & SOC Analyst">
+  <meta property="og:description" content="Cybersecurity engineering student at ESI-SBA. Hands-on in SIEM, Zeek, WAF tuning, malware analysis, and industrial security.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anisblf02.github.io/">
+
+  <!-- Google Fonts: JetBrains Mono & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="assets/img/avatar.png">
+</head>
+<body>
+
+  <!-- Cyber Background Layers -->
+  <div class="cyber-bg-grid" aria-hidden="true"></div>
+  <div class="cyber-bg-vignette" aria-hidden="true"></div>
+
+  <!-- Top System Status Bar -->
+  <header class="system-status-bar">
+    <div class="status-left">
+      <div class="status-item">
+        <span class="status-indicator online"></span>
+        <span>SEC-OPS NODE: <strong>DZ-SKIKDA</strong></span>
+      </div>
+      <div class="status-item">
+        <span>SECURITY LEVEL: <span class="status-tag">DEFCON 4 // GUARDED</span></span>
+      </div>
+      <div class="status-item">
+        <span>LATENCY: <strong id="telemetry-latency">16ms</strong></span>
+      </div>
+    </div>
+    <div class="status-right">
+      <div class="status-item">
+        <span>SIEM INGEST: <strong id="telemetry-events">4,820</strong> EPS</span>
+      </div>
+      <div class="status-item">
+        <span>STATUS: <span class="status-tag" style="color: var(--cyber-green); border-color: rgba(0, 255, 136, 0.3);">READY FOR SOC ENGAGEMENT</span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-icon">🛡️</span>
+        <span>anisblf02<span class="cursor">_</span></span>
+      </a>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">[☰]</button>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">// about</a></li>
+        <li><a href="#experience" class="nav-link">// experience</a></li>
+        <li><a href="#projects" class="nav-link">// labs & projects</a></li>
+        <li><a href="#skills" class="nav-link">// skills</a></li>
+        <li><a href="#education" class="nav-link">// education</a></li>
+        <li><a href="#terminal" class="nav-link">// terminal</a></li>
+        <li><a href="#contact" class="nav-link">// contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-sound-toggle" id="btn-sound-toggle" title="Toggle cyber terminal audio feedback">🔊 Audio: ON</button>
+        <button class="btn-terminal-toggle" onclick="window.runTerminalCommand('help')" title="Open Interactive Terminal">
+          <span>⚡</span>
+          <span>CLI Shell</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content Container -->
+  <main class="page-container">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-content">
+        <div class="hero-meta-badge">
+          <span class="status-indicator online"></span>
+          <span>SOC ANALYST // CYBERSECURITY ENGINEER</span>
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="highlight">Anis Boulfoul</span>
+        </h1>
+
+        <div class="hero-role">
+          <span>Final-Year Cybersecurity Engineering Student @ ESI-SBA</span>
+        </div>
+
+        <p class="hero-bio">
+          Dedicated defensive security specialist targeting a <strong>SOC Analyst</strong> role. Hands-on in deploying SIEM infrastructures, authoring network threat detections, triaging malware, tuning WAF rules, and automating security telemetry across critical networks.
+        </p>
+
+        <div class="hero-chips">
+          <div class="hero-chip">
+            <span class="icon">📍</span>
+            <span>Skikda, Algeria</span>
+          </div>
+          <div class="hero-chip">
+            <span class="icon">🎓</span>
+            <span>ESI-SBA (2020 – 2027)</span>
+          </div>
+          <div class="hero-chip">
+            <span class="icon">🏭</span>
+            <span>SONATRACH Industrial SecOps</span>
+          </div>
+          <div class="hero-chip">
+            <span class="icon">🛡️</span>
+            <span>Elastic Stack & Zeek SIEM</span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="Anis_Boulfoul_CV.pdf" download="Anis_Boulfoul_CV.pdf" class="btn btn-primary" id="btn-hero-download">
+            <span>📄</span>
+            <span>Download CV (PDF)</span>
+          </a>
+          <button onclick="window.runTerminalCommand('help')" class="btn btn-outline-green">
+            <span>⚡</span>
+            <span>Launch SecOps CLI</span>
+          </button>
+          <button class="btn btn-secondary btn-copy-email" title="Click to copy email">
+            <span>✉️</span>
+            <span>Copy Email</span>
+          </button>
+          <a href="https://github.com/anisblf02" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="GitHub Profile">
+            <span>🐙</span>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/anisboulfoul" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="LinkedIn Profile">
+            <span>💼</span>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- SOC ID Hologram Card -->
+      <div class="hero-card-wrapper" id="about">
+        <div class="soc-id-card">
+          <div class="card-top-bar">
+            <span>STATION: CYBER-NODE-01</span>
+            <span>ID: AB-2027-SOC</span>
+          </div>
+
+          <div class="avatar-container">
+            <div class="avatar-frame"></div>
+            <img src="assets/img/avatar.png" alt="Anis Boulfoul" class="avatar-img" width="130" height="130">
+          </div>
+
+          <div class="card-info">
+            <h2 class="card-name">Anis Boulfoul</h2>
+            <div class="card-title">Cybersecurity Engineer // SOC Track</div>
+          </div>
+
+          <div class="card-details">
+            <div class="card-row">
+              <span>SPECIALTY:</span>
+              <span style="color: var(--cyber-cyan);">Threat Detection & SIEM</span>
+            </div>
+            <div class="card-row">
+              <span>INSTITUTION:</span>
+              <span>ESI-SBA (Algeria)</span>
+            </div>
+            <div class="card-row">
+              <span>CORE STACK:</span>
+              <span style="color: var(--cyber-green);">Elastic · Zeek · YARA</span>
+            </div>
+            <div class="card-row">
+              <span>STATUS:</span>
+              <span style="color: var(--cyber-green); font-weight: bold;">AVAILABLE FOR HIRE</span>
+            </div>
+          </div>
+
+          <div class="card-security-badge">
+            <span>CLEARANCE: INDUSTRIAL & CRITICAL INFRASTRUCTURE DEFENSE</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELEMETRY / FOCUS DOMAINS STRIP -->
+    <section class="telemetry-strip" aria-label="Key Competencies">
+      <div class="telemetry-card">
+        <div class="telemetry-number">01 // INDUSTRIAL DEFENSE</div>
+        <h3 class="telemetry-title">SONATRACH Audit</h3>
+        <p class="telemetry-desc">Critical oil & gas petrochemical site security: VLAN segmentation, firewall ACL audits, vulnerability prioritization by CVSS score.</p>
+      </div>
+
+      <div class="telemetry-card">
+        <div class="telemetry-number">02 // SIEM & TELEMETRY</div>
+        <h3 class="telemetry-title">Detection Engineering</h3>
+        <p class="telemetry-desc">Elasticsearch, Kibana, Elastic Agent & Zeek integration. Authored custom KQL alert rules and 5 network threat detection scripts.</p>
+      </div>
+
+      <div class="telemetry-card">
+        <div class="telemetry-number">03 // AUTOMATION & TWIN</div>
+        <h3 class="telemetry-title">Telemetry & Playbooks</h3>
+        <p class="telemetry-desc">NetBox GNS3 digital twin sync, SNMP monitoring with Telegraf & InfluxDB/Grafana, automated daily state playbooks via Ansible.</p>
+      </div>
+
+      <div class="telemetry-card">
+        <div class="telemetry-number">04 // FORENSICS & TRIAGE</div>
+        <h3 class="telemetry-title">Malware Analysis</h3>
+        <p class="telemetry-desc">Static & dynamic analysis of Windows PE and Linux ELF binaries with YARA signatures, Volatility 3 memory forensics, and eBPF tracing.</p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION: SONATRACH -->
+    <section class="section-wrapper" id="experience">
+      <div class="section-header">
+        <div class="section-label">Industrial Security Track Record</div>
+        <h2 class="section-title">Cybersecurity Experience</h2>
+        <p class="section-subtitle">Real-world security operations within a nation-critical enterprise environment.</p>
+      </div>
+
+      <div class="experience-card">
+        <div class="exp-header">
+          <div>
+            <h3 class="exp-role-title">Cybersecurity Intern</h3>
+            <div class="exp-company">
+              <span>🏭</span>
+              <span>SONATRACH — Skikda Industrial Complex</span>
+              <span class="status-tag" style="font-size: 0.72rem;">Information Systems Department</span>
+            </div>
+          </div>
+          <div class="exp-meta">
+            <div class="exp-date">September 2025</div>
+            <div class="exp-location">Skikda, Algeria</div>
+          </div>
+        </div>
+
+        <div class="exp-context-box">
+          Embedded with the network security, cybersecurity, and database teams protecting a high-security oil, gas, and petrochemical complex with tightly segmented IT and industrial control (OT) networks separated by enterprise firewalls and VLANs.
+        </div>
+
+        <div class="exp-grid">
+          <div class="exp-item">
+            <div class="exp-item-header">
+              <span class="exp-item-icon">🔍</span>
+              <span>Vulnerability Scanning & CVSS Prioritization</span>
+            </div>
+            <p class="exp-item-text">
+              Participated in vulnerability scan planning and execution using enterprise security tools. Filtered false positives and ranked remediation priorities based on CVSS scoring and asset criticality.
+            </p>
+            <div class="exp-tags">
+              <span class="exp-tag">CVSS v3</span>
+              <span class="exp-tag">Vuln Assessment</span>
+              <span class="exp-tag">Risk Remediation</span>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-item-header">
+              <span class="exp-item-icon">🛡️</span>
+              <span>Firewall & Network Configuration Audits</span>
+            </div>
+            <p class="exp-item-text">
+              Assisted in auditing security configuration baselines: reviewed firewall rule sets, router/switch Access Control Lists (ACLs), secure remote administration policies, and centralized logging.
+            </p>
+            <div class="exp-tags">
+              <span class="exp-tag">Firewall Rules</span>
+              <span class="exp-tag">Cisco ACLs</span>
+              <span class="exp-tag">Security Baseline</span>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-item-header">
+              <span class="exp-item-icon">📡</span>
+              <span>Packet Capture & Traffic Verification</span>
+            </div>
+            <p class="exp-item-text">
+              Captured and inspected network traffic using Wireshark, mapped physical and logical network segments, and verified VLAN isolation between administrative IT systems and sensitive production networks.
+            </p>
+            <div class="exp-tags">
+              <span class="exp-tag">Wireshark</span>
+              <span class="exp-tag">VLAN Segmentation</span>
+              <span class="exp-tag">Packet Analysis</span>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-item-header">
+              <span class="exp-item-icon">⚡</span>
+              <span>SIEM Monitoring & Incident Lifecycle</span>
+            </div>
+            <p class="exp-item-text">
+              Studied SIEM log ingestion flows and observed the SOC incident response lifecycle (Detection, Containment, Eradication, and Recovery) practiced by the site's security operations team.
+            </p>
+            <div class="exp-tags">
+              <span class="exp-tag">SIEM Ops</span>
+              <span class="exp-tag">Incident Response</span>
+              <span class="exp-tag">SOC Procedures</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS & DEFENSIVE LABS SECTION -->
+    <section class="section-wrapper" id="projects">
+      <div class="section-header">
+        <div class="section-label">Defensive Engineering & Research</div>
+        <h2 class="section-title">Labs & Security Projects</h2>
+        <p class="section-subtitle">Real-world labs constructed to simulate, analyze, and neutralize cyber threats.</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Labs [8]</button>
+        <button class="filter-btn" data-filter="siem">SIEM & Detection [2]</button>
+        <button class="filter-btn" data-filter="infra">Automation & Infra [2]</button>
+        <button class="filter-btn" data-filter="malware">Malware & Forensics [1]</button>
+        <button class="filter-btn" data-filter="appsec">AppSec & DevSecOps [2]</button>
+        <button class="filter-btn" data-filter="offensive">Offensive & Research [1]</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+
+        <!-- Project 1: SIEM & Zeek Lab -->
+        <article class="project-card" data-category="siem">
+          <div class="project-top">
+            <div class="project-header-bar">
+              <span class="project-badge">LAB 01 // SIEM</span>
+              <span>2026</span>
+            </div>
+            <h3 class="project-title">SIEM & Network Detection Lab</h3>
+            <p class="project-desc">
+              Comprehensive threat detection platform turning raw network packet flows into structured, actionable security intelligence.
+            </p>
+            <ul class="project-points">
+              <li>Deployed Elasticsearch, Kibana, and Elastic Agent with Zeek network security monitor.</li>
+              <li>Ingested and normalized conn, dns, http, and ssl transaction logs.</li>
+              <li>Constructed KQL threat dashboards and behavioral SIEM detection rules for suspicious activity.</li>
+              <li>Engineered 5 custom Zeek scripts for signature and behavioral threat surfacing at wire speed.</li>
+            </ul>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Elasticsearch</span>
+              <span class="tech-tag">Kibana</span>
+              <span class="tech-tag">Zeek</span>
+              <span class="tech-tag">KQL</span>
+              <span class="tech-tag">Elastic Agent</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/anisblf02" target="_blank" rel="noopener noreferrer" class="project-link">
+              <span>View Source on GitHub</span>
+              <span>→</span>
+            </a>
+            <span class="project-status">SOC Verified</span>
+          </div>
+        </article>
+
+        <!-- Project 2: Network Digital Twin -->
+        <article class="project-card" data-category="infra">
+          <div class="project-top">
+            <div class="project-header-bar">
+              <span class="project-badge purple">LAB 02 // AUTOMATION</span>
+              <span>2026</span>
+            </div>
+            <h3 class="project-title">Network Digital Twin: Monitoring & Automation</h3>
+            <p class="project-desc">
+              Full-scale enterprise infrastructure twin mirroring an 18-device GNS3 topology with real-time telemetry and automated playbook governance. (Jury-presented 5-student team project).
+            </p>
+            <ul class="project-points">
+              <li>Architected the dedicated Ubuntu VM monitoring and automation layer using Docker containers.</li>
+              <li>Configured Telegraf to poll Cisco L3 routers/switches over SNMP every 60s into InfluxDB.</li>
+              <li>Engineered Grafana dashboards graphing CPU loads, link status, interface bandwidth, and errors.</li>
+              <li>Built a systemd daemon syncing the 18-device topology into NetBox as source of truth.</li>
+              <li>Automated daily configuration backups and state audits via 5 Ansible playbooks scheduled by cron.</li>
+            </ul>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Grafana</span>
+              <span class="tech-tag">Prometheus</span>
+              <span class="tech-tag">Ansible</span>
+              <span class="tech-tag">NetBox</span>
+              <span class="tech-tag">GNS3</span>
+              <span class="tech-tag">InfluxDB</span>
+              <span class="tech-tag">Telegraf</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/anisblf02" target="_blank" rel="noopener noreferrer" class="project-link">
+              <span>View Source on GitHub</span>
+              <span>→</span>
+            </a>
+            <span class="project-status">Jury Evaluated</span>
+          </div>
+        </article>
+
+        <!-- Project 3: Malware Analysis -->
+        <article class="project-card" data-category="malware">
+          <div class="project-top">
+            <div class="project-header-bar">
+              <span class="project-badge amber">LAB 03 // FORENSICS</span>
+              <span>2026</span>
+            </div>
+            <h3 class="project-title">Malware Analysis & Forensics Lab</h3>
+            <p class="project-desc">
+              In-depth reverse engineering and forensic triage pipeline analyzing compiled binaries across Windows and Linux platforms.
+            </p>
+            <ul class="project-points">
+              <li>Conducted static analysis on Windows (PE) and Linux (ELF) binaries to identify suspicious imports, strings, and pack headers.</li>
+              <li>Crafted custom YARA rules to detect compiled malware variants and specific payload patterns.</li>
+              <li>Performed dynamic execution tracing and breakpoint debugging using GDB and Ghidra.</li>
+              <li>Analyzed system memory dumps using Volatility 3 to uncover injected code and hidden processes.</li>
+              <li>Tracked runtime system call invocations and file modifications via kernel eBPF probes.</li>
+            </ul>
+            <div class="project-tech-tags">
+              <span class="tech-tag">YARA</span>
+              <span class="tech-tag">Volatility 3</span>
+              <span class="tech-tag">GDB</span>
+              <span class="tech-tag">Ghidra</span>
+              <span class="tech-tag">eBPF</span>
+              <span class="tech-tag">PE / ELF</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/anisblf02" target="_blank" rel="noopener noreferrer" class="project-link">
+              <span>View Source on GitHub</span>
+              <span>→</span>
+            </a>
+            <span class="project-status">Research Lab</span>
+          </div>
+        </article>
+
+        <!-- Project 4: WAF Rule Engineering -->
+        <article class="project-card" data-category="appsec">
+          <div class="project-top">
+            <div class="project-header-bar">
+              <span class="project-badge">LAB 04 // APPSEC</span>
+              <span>2026</span>
+            </div>
+            <h3 class="project-title">WAF Rule Engineering & Tuning</h3>
+            <p class="project-desc">
+              Web application firewall hardening implementing anomaly scoring models to block exploitation while minimizing operational disruption.
+            </p>
+            <ul class="project-points">
+              <li>Authored custom ModSecurity CRS detection rules with cumulative anomaly scoring.</li>
+              <li>Simulated OWASP Top 10 web attack vectors (SQLi, XSS, Path Traversal) against DVWA test environments.</li>
+              <li>Tuned detection rules and exclusions to eliminate false positives on JWT-authenticated REST APIs.</li>
+              <li>Structured audit logging for ingestion into central SIEM analysis pipelines.</li>
+            </ul>
+            <div class="project-tech-tags">
+              <span class="tech-tag">ModSecurity</span>
+              <span class="tech-tag">OWASP CRS</span>
+              <span class="tech-tag">DVWA</span>
+              <span class="tech-tag">JWT</span>
+              <span class="tech-tag">Nginx</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/anisblf02" target="_blank" rel="noopener noreferrer" class="project-link">
+              <span>View Source on GitHub</span>
+              <span>→</span>
+            </a>
+            <span class="project-status">Defensive Suite</span>
+          </div>
+        </article>
+
+        <!-- Project 5: DevSecOps CI/CD Pipeline -->
+        <article class="project-card" data-category="appsec">
+          <div class="project-top">
+            <div class="project-header-bar">
+              <span class="project-badge purple">LAB 05 // DEVSECOPS</span>
+              <span>2025</span>
+            </div>
+            <h3 class="project-title">DevSecOps CI/CD Security Pipeline</h3>
+            <p class="project-desc">
+              Shift-left security automation pipeline embedding rigorous quality gates directly into software delivery lifecycles.
+            </p>
+            <ul class="project-points">
+              <li>Constructed an automated GitLab CI pipeline enforcing multiple progressive security gates.</li>
+              <li>Integrated Gitleaks for pre-merge secret scanning and credential leakage prevention.</li>
+              <li>Embedded Semgrep for custom static application security testing (SAST) rule enforcement.</li>
+              <li>Automated software dependency vulnerability analysis using Safety and automated reporting.</li>
+            </ul>
+            <div class="project-tech-tags">
+              <span class="tech-tag">GitLab CI</span>
+              <span class="tech-tag">Gitleaks</span>
+              <span class="tech-tag">Semgrep</span>
+              <span class="tech-tag">Safety</span>
+              <span class="tech-tag">DevSecOps</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/anisblf02" target="_blank" rel="noopener noreferrer" class="project-link">
+              <span>View Source on GitHub</span>
+              <span>→</span>
+            </a>
+            <span class="project-status">Pipeline Active</span>
+          </div>
+        </article>
+
+        <!-- Project 6: ML for Threat Detection -->
+        <article class="project-card" data-category="siem">
+          <div class="project-top">
+            <div class="project-header-bar">
+              <span class="project-badge">LAB 06 // AI DEFENSE</span>
+              <span>2025</span>
+            </div>
+            <h3 class="project-title">Machine Learning for Threat Detection</h3>
+            <p class="project-desc">
+              Data science approach to cybersecurity applying machine learning classifiers and clustering algorithms to network and telemetry datasets.
+            </p>
+            <ul class="project-points">
+              <li>Built supervised classification models for network intrusion detection and malicious packet classification.</li>
+              <li>Engineered NLP feature extractors to detect phishing email patterns with high precision.</li>
+              <li>Applied unsupervised anomaly detection algorithms (Isolation Forests, One-Class SVM) to raw network flow data.</li>
+            </ul>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Scikit-Learn</span>
+              <span class="tech-tag">Jupyter</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">Anomaly Detection</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/anisblf02" target="_blank" rel="noopener noreferrer" class="project-link">
+              <span>View Source on GitHub</span>
+              <span>→</span>
+            </a>
+            <span class="project-status">ML Pipeline</span>
+          </div>
+        </article>
+
+        <!-- Project 7: Identity, Access & Cloud Infra -->
+        <article class="project-card" data-category="infra">
+          <div class="project-top">
+            <div class="project-header-bar">
+              <span class="project-badge purple">LAB 07 // CLOUD & IAM</span>
+              <span>2025 – 2026</span>
+            </div>
+            <h3 class="project-title">Identity, Access & Kubernetes Security</h3>
+            <p class="project-desc">
+              Zero-trust identity infrastructure and container orchestration hardening with automated synchronization.
+            </p>
+            <ul class="project-points">
+              <li>Integrated Keycloak and OpenLDAP with Flask web applications using OIDC Authorization Code Flow.</li>
+              <li>Deployed ArgoCD GitOps pipelines with automated sync, self-healing, and cluster drift detection.</li>
+              <li>Configured hardened MongoDB ReplicaSets on Kubernetes with StatefulSets, RBAC, and strict NetworkPolicies.</li>
+            </ul>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Keycloak</span>
+              <span class="tech-tag">OpenLDAP</span>
+              <span class="tech-tag">Kubernetes</span>
+              <span class="tech-tag">ArgoCD</span>
+              <span class="tech-tag">OIDC</span>
+              <span class="tech-tag">RBAC</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/anisblf02" target="_blank" rel="noopener noreferrer" class="project-link">
+              <span>View Source on GitHub</span>
+              <span>→</span>
+            </a>
+            <span class="project-status">Cloud Hardened</span>
+          </div>
+        </article>
+
+        <!-- Project 8: Offensive Security & Cryptanalysis -->
+        <article class="project-card" data-category="offensive">
+          <div class="project-top">
+            <div class="project-header-bar">
+              <span class="project-badge amber">LAB 08 // OFFENSIVE & CRYPTO</span>
+              <span>2025 – 2026</span>
+            </div>
+            <h3 class="project-title">Offensive Security, CTFs & Cryptanalysis</h3>
+            <p class="project-desc">
+              Adversarial research and simulation labs to understand threat actor tradecraft, reverse cipher algorithms, and audit embedded hardware.
+            </p>
+            <ul class="project-points">
+              <li>Solved complex web exploitation CTFs: SSRF via DNS rebinding, Blind SQLi with Out-Of-Band (OOB) data exfiltration.</li>
+              <li>Intercepted and analyzed mobile application network traffic through proxy certificates using Burp Suite.</li>
+              <li>Implemented the GSM A5/1 stream cipher from specification with a known-plaintext attack simulator.</li>
+              <li>Extracted Arduino Uno firmware through UART and bootloader interfaces for binary analysis in Ghidra.</li>
+            </ul>
+            <div class="project-tech-tags">
+              <span class="tech-tag">Burp Suite</span>
+              <span class="tech-tag">CTF Research</span>
+              <span class="tech-tag">Cryptanalysis</span>
+              <span class="tech-tag">Ghidra</span>
+              <span class="tech-tag">UART</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/anisblf02" target="_blank" rel="noopener noreferrer" class="project-link">
+              <span>View Source on GitHub</span>
+              <span>→</span>
+            </a>
+            <span class="project-status">Offensive Lab</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SKILLS MATRIX SECTION -->
+    <section class="section-wrapper" id="skills">
+      <div class="section-header">
+        <div class="section-label">Technical Arsenal</div>
+        <h2 class="section-title">Skills & Capabilities Matrix</h2>
+        <p class="section-subtitle">Categorized competencies developed through engineering studies, industrial audits, and security labs.</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Cat 1: Security Operations -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🛡️</span>
+            <h3 class="skill-cat-title">Security Operations</h3>
+          </div>
+          <div class="skill-tags-wrapper">
+            <span class="skill-pill core">SIEM Deployment</span>
+            <span class="skill-pill core">Log Analysis</span>
+            <span class="skill-pill core">Detection Rules</span>
+            <span class="skill-pill core">Network Traffic Analysis</span>
+            <span class="skill-pill">Vulnerability Assessment</span>
+            <span class="skill-pill">Incident Response</span>
+            <span class="skill-pill">Malware Analysis (PE/ELF)</span>
+            <span class="skill-pill">Memory Forensics</span>
+            <span class="skill-pill">WAF Tuning</span>
+            <span class="skill-pill">CVSS Prioritization</span>
+          </div>
+        </div>
+
+        <!-- Cat 2: Security & Forensic Tools -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🔍</span>
+            <h3 class="skill-cat-title">Defensive & Forensic Tools</h3>
+          </div>
+          <div class="skill-tags-wrapper">
+            <span class="skill-pill core">Elastic Stack (ES, Kibana)</span>
+            <span class="skill-pill core">Zeek</span>
+            <span class="skill-pill core">Wireshark</span>
+            <span class="skill-pill core">YARA</span>
+            <span class="skill-pill">Volatility 3</span>
+            <span class="skill-pill">ModSecurity</span>
+            <span class="skill-pill">Nmap</span>
+            <span class="skill-pill">Burp Suite</span>
+            <span class="skill-pill">Ghidra</span>
+            <span class="skill-pill">GDB</span>
+            <span class="skill-pill">Elastic Agent</span>
+          </div>
+        </div>
+
+        <!-- Cat 3: Monitoring & Automation -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">⚡</span>
+            <h3 class="skill-cat-title">Monitoring & Automation</h3>
+          </div>
+          <div class="skill-tags-wrapper">
+            <span class="skill-pill core">Grafana</span>
+            <span class="skill-pill core">Prometheus</span>
+            <span class="skill-pill core">Ansible</span>
+            <span class="skill-pill">InfluxDB</span>
+            <span class="skill-pill">Telegraf</span>
+            <span class="skill-pill">NetBox</span>
+            <span class="skill-pill">SNMP Monitoring</span>
+            <span class="skill-pill">Cron Scheduling</span>
+            <span class="skill-pill">eBPF</span>
+          </div>
+        </div>
+
+        <!-- Cat 4: DevOps & DevSecOps -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🔄</span>
+            <h3 class="skill-cat-title">DevOps & DevSecOps</h3>
+          </div>
+          <div class="skill-tags-wrapper">
+            <span class="skill-pill core">Docker</span>
+            <span class="skill-pill core">Kubernetes</span>
+            <span class="skill-pill core">GitLab CI</span>
+            <span class="skill-pill">Git / GitHub Actions</span>
+            <span class="skill-pill">Gitleaks</span>
+            <span class="skill-pill">Semgrep</span>
+            <span class="skill-pill">Safety</span>
+            <span class="skill-pill">ArgoCD</span>
+            <span class="skill-pill">Jenkins</span>
+          </div>
+        </div>
+
+        <!-- Cat 5: Infrastructure & Networks -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🌐</span>
+            <h3 class="skill-cat-title">Systems & Infrastructure</h3>
+          </div>
+          <div class="skill-tags-wrapper">
+            <span class="skill-pill core">Linux (Debian/Ubuntu/Alpine)</span>
+            <span class="skill-pill core">VLAN & Network Segmentation</span>
+            <span class="skill-pill core">Cisco IOS & ACLs</span>
+            <span class="skill-pill">GNS3 Emulation</span>
+            <span class="skill-pill">OpenStack</span>
+            <span class="skill-pill">ZeroTier</span>
+            <span class="skill-pill">Keycloak (OIDC)</span>
+            <span class="skill-pill">OpenLDAP</span>
+          </div>
+        </div>
+
+        <!-- Cat 6: Languages & Protocols -->
+        <div class="skill-category-card">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">💻</span>
+            <h3 class="skill-cat-title">Programming & Protocols</h3>
+          </div>
+          <div class="skill-tags-wrapper">
+            <span class="skill-pill core">Python</span>
+            <span class="skill-pill core">Bash Scripting</span>
+            <span class="skill-pill">KQL (Kibana Query Language)</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">TCP/IP & DNS</span>
+            <span class="skill-pill">HTTP/S & TLS</span>
+            <span class="skill-pill">SNMP & Syslog</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION & LANGUAGES SECTION -->
+    <section class="section-wrapper" id="education">
+      <div class="section-header">
+        <div class="section-label">Academic Foundations</div>
+        <h2 class="section-title">Education, Training & Languages</h2>
+        <p class="section-subtitle">Rigorous computer science curriculum complemented by self-directed training.</p>
+      </div>
+
+      <div class="edu-lang-grid">
+        <!-- Education & Continuous Learning -->
+        <div class="info-panel">
+          <h3 class="panel-title">
+            <span class="icon">🎓</span>
+            <span>Education & Security Platforms</span>
+          </h3>
+
+          <div class="edu-entry">
+            <h4 class="edu-institution">École Supérieure en Informatique (ESI-SBA)</h4>
+            <div class="edu-degree">State Engineering Degree in Computer Science — Cybersecurity Track</div>
+            <div class="edu-years">Sidi Bel Abbès, Algeria • 2020 – 2027 (Expected Graduation)</div>
+          </div>
+
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+            Continuous hands-on lab training, CTFs, and defensive problem-solving across world-class security platforms:
+          </p>
+
+          <div class="training-platforms">
+            <div class="platform-badge">
+              <span class="flag">🚩</span>
+              <span>TryHackMe</span>
+            </div>
+            <div class="platform-badge">
+              <span class="flag">🚩</span>
+              <span>HackTheBox</span>
+            </div>
+            <div class="platform-badge">
+              <span class="flag">🚩</span>
+              <span>PicoCTF</span>
+            </div>
+            <div class="platform-badge">
+              <span class="flag">🚩</span>
+              <span>PortSwigger Web Security Academy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="info-panel">
+          <h3 class="panel-title">
+            <span class="icon">🌐</span>
+            <span>Language Proficiencies</span>
+          </h3>
+
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+            Multilingual communication skills for international SOC teams and multicultural technical environments:
+          </p>
+
+          <div class="lang-list">
+            <div class="lang-item">
+              <span class="lang-name">Arabic</span>
+              <span class="lang-level">Native</span>
+            </div>
+            <div class="lang-item">
+              <span class="lang-name">English</span>
+              <span class="lang-level">C1 Advanced</span>
+            </div>
+            <div class="lang-item">
+              <span class="lang-name">French</span>
+              <span class="lang-level">B2 Professional</span>
+            </div>
+            <div class="lang-item">
+              <span class="lang-name">German</span>
+              <span class="lang-level">A1 Elementary</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE TERMINAL EMULATOR -->
+    <section class="section-wrapper terminal-section" id="terminal">
+      <div class="section-header">
+        <div class="section-label">Interactive Console</div>
+        <h2 class="section-title">SecOps Terminal Emulator</h2>
+        <p class="section-subtitle">Type commands directly or click the quick pills below to interact with the workstation shell.</p>
+      </div>
+
+      <div class="terminal-window" id="terminal-window">
+        <div class="terminal-titlebar">
+          <div class="terminal-buttons">
+            <button class="t-btn close" title="Close / Restart Shell" onclick="window.runTerminalCommand('exit')"></button>
+            <button class="t-btn minimize" title="Clear Console" onclick="window.runTerminalCommand('clear')"></button>
+            <button class="t-btn maximize" title="Print Banner" onclick="window.runTerminalCommand('banner')"></button>
+          </div>
+          <div class="terminal-title">
+            <span>💻</span>
+            <span>secops@anisblf02: ~/portfolio (bash)</span>
+          </div>
+          <div class="terminal-tabs">
+            <span>[SESSION: ACTIVE]</span>
+          </div>
+        </div>
+
+        <div class="terminal-body" id="terminal-body">
+          <!-- Terminal output lines injected via JS -->
+          <div class="terminal-input-row">
+            <span class="terminal-input-prompt">secops@anisblf02:~$</span>
+            <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="type 'help', 'siem', 'scan' or 'download'..." aria-label="Terminal Command Input">
+          </div>
+        </div>
+
+        <div class="terminal-quick-bar">
+          <span style="color: var(--text-dim);">Quick Commands:</span>
+          <button class="quick-cmd-btn" data-cmd="help">help</button>
+          <button class="quick-cmd-btn" data-cmd="whoami">whoami</button>
+          <button class="quick-cmd-btn" data-cmd="skills">skills</button>
+          <button class="quick-cmd-btn" data-cmd="projects">projects</button>
+          <button class="quick-cmd-btn" data-cmd="exp">exp</button>
+          <button class="quick-cmd-btn" data-cmd="siem">siem (demo)</button>
+          <button class="quick-cmd-btn" data-cmd="scan">scan (audit)</button>
+          <button class="quick-cmd-btn" data-cmd="download">download cv</button>
+          <button class="quick-cmd-btn" data-cmd="matrix">matrix</button>
+          <button class="quick-cmd-btn" data-cmd="clear">clear</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & FOOTER SECTION -->
+    <section class="section-wrapper" id="contact">
+      <div class="contact-card">
+        <h2 class="contact-title">Let's Connect & Secure Together</h2>
+        <p class="contact-subtitle">
+          Actively interviewing for <strong>SOC Analyst</strong> and <strong>Defensive Security</strong> opportunities. Reach out via email, LinkedIn, or explore my code on GitHub.
+        </p>
+
+        <div class="contact-channels">
+          <a href="mailto:anisboulfoul2@gmail.com" class="contact-pill">
+            <span class="icon">✉️</span>
+            <span>anisboulfoul2@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/anisboulfoul" target="_blank" rel="noopener noreferrer" class="contact-pill">
+            <span class="icon">💼</span>
+            <span>linkedin.com/in/anisboulfoul</span>
+          </a>
+          <a href="https://github.com/anisblf02" target="_blank" rel="noopener noreferrer" class="contact-pill">
+            <span class="icon">🐙</span>
+            <span>github.com/anisblf02</span>
+          </a>
+          <a href="tel:+213554262437" class="contact-pill">
+            <span class="icon">📞</span>
+            <span>+213 554 26 24 37</span>
+          </a>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="Anis_Boulfoul_CV.pdf" download="Anis_Boulfoul_CV.pdf" class="btn btn-primary">
+            <span>📄</span>
+            <span>Download Official CV (.PDF)</span>
+          </a>
+          <button class="btn btn-secondary btn-copy-email">
+            <span>📋</span>
+            <span>Copy Email Address</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <span class="footer-hash">#</span>
+        <span>Anis Boulfoul • Cybersecurity Engineering Portfolio</span>
+      </div>
+      <div>
+        <span>Zero tracking · Encrypted mindset · Host: GitHub Pages</span>
+      </div>
+      <div class="footer-right">
+        <a href="#hero">Back to Top ↑</a>
+        <a href="Anis_Boulfoul_CV.pdf" download>CV</a>
+        <a href="https://github.com/anisblf02" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/anisboulfoul" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript Engines -->
+  <script src="js/main.js"></script>
+  <script src="js/terminal.js"></script>
+</body>
+</html>
