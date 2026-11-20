@@ -92,8 +92,8 @@
   const CV_DATA = {
     name: "Anis Boulfoul",
     role: "Cybersecurity Engineering Student | SOC Analyst Candidate",
-    location: "Skikda / Sidi Bel Abbès, Algeria",
-    education: "École Supérieure en Informatique (ESI-SBA), 2020 – 2027 (Expected)",
+    location: "Tamalous, Skikda, Algeria",
+    education: "École Supérieure en Informatique (ESI-SBA), Final Year (Expected 2027)",
     internship: "SONATRACH, Skikda Complex (Information Systems Dept) - Sep 2025",
     email: "anisboulfoul2@gmail.com",
     github: "https://github.com/anisblf02",
@@ -232,7 +232,7 @@
       printLine(`<span class="term-cyan font-bold">ACADEMIC BACKGROUND & TRAINING:</span>`);
       printLine(`  <span class="term-green">Institution:</span> École Supérieure en Informatique (ESI-SBA)`);
       printLine(`  <span class="term-green">Degree:</span>      State Engineering Degree in Computer Science (Cybersecurity Track)`);
-      printLine(`  <span class="term-green">Graduation:</span>  2020 – 2027 (Expected)`);
+      printLine(`  <span class="term-green">Graduation:</span>  Expected 2027 (Final Year)`);
       printLine(`  <span class="term-green">Languages:</span>   Arabic (Native) | English (C1 Proficient) | French (B2 Professional) | German (A1)`);
       printLine(`  <span class="term-green">Practice:</span>    TryHackMe, HackTheBox, PicoCTF, PortSwigger Web Security Academy`);
     },
@@ -240,7 +240,7 @@
     cv: () => {
       printLine(`<span class="term-cyan font-bold">CURRICULUM VITAE SUMMARY:</span>`);
       printLine(`  Name:        Anis Boulfoul`);
-      printLine(`  Education:   ESI-SBA Cybersecurity Track (2020 - 2027)`);
+      printLine(`  Education:   ESI-SBA Cybersecurity Track (Graduating 2027)`);
       printLine(`  Experience:  SONATRACH Skikda Complex Internship (Sep 2025)`);
       printLine(`  Core Focus:  SOC Operations, SIEM (Elastic), Zeek, Forensics, DevSecOps`);
       printLine(`  PDF File:    <a href="Anis_Boulfoul_CV.pdf" target="_blank" class="term-green underline">Anis_Boulfoul_CV.pdf</a>`);
@@ -263,7 +263,7 @@
       printLine(`  Email:    <a href="mailto:anisboulfoul2@gmail.com" class="term-green">anisboulfoul2@gmail.com</a>`);
       printLine(`  LinkedIn: <a href="https://www.linkedin.com/in/anisboulfoul" target="_blank" class="term-green">linkedin.com/in/anisboulfoul</a>`);
       printLine(`  GitHub:   <a href="https://github.com/anisblf02" target="_blank" class="term-green">github.com/anisblf02</a>`);
-      printLine(`  Location: Skikda / Sidi Bel Abbès, Algeria`);
+      printLine(`  Location: Tamalous, Skikda, Algeria`);
     },
 
     siem: () => {

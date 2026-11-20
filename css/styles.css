@@ -389,10 +389,17 @@ body {
 
 .hero-actions {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 0.75rem;
   margin-top: 0.5rem;
+}
+
+.hero-actions-primary,
+.hero-actions-secondary {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 /* Primary Button Styles */
@@ -1469,7 +1476,7 @@ body {
     max-width: 340px;
     margin: 0 auto;
   }
-  .hero-actions, .hero-chips, .hero-role {
+  .hero-actions, .hero-chips, .hero-role, .hero-actions-primary, .hero-actions-secondary {
     justify-content: center;
   }
   .telemetry-strip {
